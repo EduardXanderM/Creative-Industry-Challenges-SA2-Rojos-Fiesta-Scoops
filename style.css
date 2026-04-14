@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --primary-color-1: #F05AA1;
+    --primary-color-2: #94D2C3;
+    --primary-color-3: #DFBA45;
+}
+
+html {
+    background-color: #F3F0E1;
+}
+
+/* Navigation Bar Styles */
+
+nav {
+    background-color: white;
+    display: flex;
+    height: min(80px, 10vh);
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    height: max(50px, 65%);
+    margin: auto 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.nav-links li {
+    margin: auto 0px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
+    padding: 0px 40px;
+    font-weight: 500;
+    border-right: 1px solid black;
+    transition: color 0.3s ease;
+}
+
+.nav-links li:first-child a {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.nav-links li:last-child a {
+    border-right: none;
+}
+
+.nav-links a:hover {
+    color: #DFBA45;
+}
+
+.nav-button {
+    background-color: var(--primary-color-1);
+    color: white;
+    border: none;
+    padding: 8px 40px;
+    margin: auto 50px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #cd4886;
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 0px 4% 0px;
+    background: linear-gradient(125deg, #F3F0E1 60%, #DFC95E);
+    border-bottom: 2px solid #867028
+}
+
+.header-content {
+    width: 40%;
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    line-height: clamp(2.5rem, 3.8vw, 4.5rem);
+}
+
+.header-content p {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    margin-top: 20px;
+}
+
+.header-content .fab {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-top: 20px;
+    margin-right: 20px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.header-content .fab:hover {
+    color: var(--primary-color-1);
+}
+
+.header-ice {
+    color: var(--primary-color-2)
+}
+
+.header-cream {
+    color: var(--primary-color-3)
+}
+
+.header-image {
+    width: 60%;
+}
+
+.header-image img {
+    width: 100%;
+}
