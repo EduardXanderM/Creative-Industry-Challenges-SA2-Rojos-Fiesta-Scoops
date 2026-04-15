@@ -19,13 +19,22 @@ nav {
     display: flex;
     height: min(80px, 10vh);
     z-index: 100;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
 }
 
 .logo {
-    height: max(50px, 65%);
-    margin: auto 50px;
+    height: clamp(40px, 5vw, 60px);
+    margin: auto clamp(20px, 4vw, 50px);
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -42,8 +51,8 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: black;
-    font-size: clamp(0.9rem, 1.2vw, 1.5rem);
-    padding: 0px 40px;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    padding: clamp(0.5rem, 0.6vw, 1rem) clamp(1rem, 2.5vw, 2rem);
     font-weight: 500;
     border-right: 1px solid black;
     transition: color 0.3s ease;
@@ -51,7 +60,7 @@ nav {
 
 .nav-links li:first-child a {
     padding-left: 0;
-    padding-right: 40px;
+    padding-right: clamp(1rem, 2.2vw, 2rem);
 }
 
 .nav-links li:last-child a {
@@ -66,13 +75,15 @@ nav {
     background-color: var(--primary-color-1);
     color: white;
     border: none;
-    padding: 8px 40px;
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 2rem);
     margin: auto 50px;
     cursor: pointer;
     font-size: clamp(0.8rem, 1.2vw, 1.5rem);
     font-weight: 500;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    margin-left: auto;
+    right: 0;
 }
 
 .nav-button:hover {
@@ -86,9 +97,10 @@ header {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    padding: 0px 4% 0px;
+    padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
+    padding-top: clamp(70px, 6vh, 150px);
     background: linear-gradient(125deg, #F3F0E1 60%, #DFC95E);
-    border-bottom: 2px solid #867028
+    border-bottom: 1.5px solid #867028
 }
 
 .header-content {
@@ -97,19 +109,20 @@ header {
 }
 
 .header-content h1 {
-    font-size: clamp(2rem, 3vw, 4rem);
-    line-height: clamp(2.5rem, 3.8vw, 4.5rem);
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
 }
 
 .header-content p {
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-size: clamp(0.9rem, 1.3vw, 1.5rem);
     margin-top: 20px;
+    width: clamp(80%, 90%, 100%);
 }
 
 .header-content .fab {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-size: clamp(1.3rem, 2.1vw, 2.5rem);
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: clamp(0.5rem, 1vw, 1.5rem);
     color: black;
     transition: color 0.3s ease;
 }
@@ -132,4 +145,106 @@ header {
 
 .header-image img {
     width: 100%;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 690px) {
+
+    /* Navigation Bar Styles */
+
+    .nav-button {
+        display: none;
+    }
+
+    /* Header Styles */
+
+    header {
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(100px, 10vh, 150px) clamp(30px, 5vw, 80px) clamp(20px, 3vh, 50px);
+    background: linear-gradient(115deg, #F3F0E1 50%, #DFC95E);
+    }
+
+    .header-content {
+    width: 100%;
+    text-align: center;
+    }
+
+    .header-content h1 {
+    font-size: clamp(1.8rem, 3vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
+    }
+
+    .header-content p {
+    font-size: clamp(0.9rem, 1.5vw, 2rem);
+    margin-top: 20px;
+    width: 100%;
+    }
+
+    .header-content .fab {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    margin-top: 20px;
+    margin-bottom: clamp(20px, 3vh, 50px);
+    margin-right: clamp(0.5rem, 1vw, 1.5rem);
+    }
+
+    .header-image {
+    width: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+
+    /* Navigation Bar Styles */
+
+    #menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: clamp(20px, 3vw, 50px);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 500;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: clamp(60px, 10vh, 100px);
+        padding: clamp(20px, 2vh, 50px) clamp(20px, 3vw, 80px);
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #f3f3f3;
+        z-index: 99;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: clamp(4px, 1vh, 20px) 0;
+        border-bottom: 1px solid gray;
+    }
+
+    .nav-links li a:first-child {
+        padding-left: clamp(0.5rem, 0.1vw, .05rem);
+    }
+
+    .nav-links li a {
+        border-right: none;
+        font-size: clamp(0.9rem, 2vw, 3rem);
+    }
+
+    .nav-links.active {
+        opacity: 1;
+    }
+
+    .nav-button {
+        display: none;
+    }
 }
