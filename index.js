@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
-  navbar.style.transform = "translateY(-100%)";
+  navbar.style.transform = "translateY(-400%)";
 } else {
   navbar.style.transform = "translateY(0)";
 }
@@ -22,4 +22,10 @@ const navLinks = document.querySelector(".nav-links");
 
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });

@@ -10,6 +10,11 @@
 
 html {
     background-color: #F3F0E1;
+    scroll-behavior: smooth;
+}
+
+#products {
+    scroll-margin-top: min(50px, 10vh);
 }
 
 /* Navigation Bar Styles */
@@ -23,7 +28,7 @@ nav {
     top: 0;
     width: 100%;
     transform: translateY(0);
-    transition: transform 0.4s ease;
+    transition: transform 0.55s ease;
 }
 
 .logo {
@@ -73,6 +78,7 @@ nav {
 
 .nav-button {
     background-color: var(--primary-color-1);
+    text-decoration: none;
     color: white;
     border: none;
     padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 2rem);
@@ -119,6 +125,27 @@ header {
     width: clamp(80%, 90%, 100%);
 }
 
+.order-button {
+    display: inline-block;
+    background-color: var(--primary-color-1);
+    color: white;
+    text-decoration: none;
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 2rem);
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #cd4886;
+}
+
+.header-socials {
+    margin-top: clamp(10px, 1vh, 30px);
+}
+
 .header-content .fab {
     font-size: clamp(1.3rem, 2.1vw, 2.5rem);
     margin-top: 20px;
@@ -147,11 +174,91 @@ header {
     width: 100%;
 }
 
+/* Products Section */
 
+.products {
+    padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
+    background-color: #F3F0E1;
+}
 
+.products h2 {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
 
+.products h6 {
+    color: #867028b7;
+    font-size: clamp(0.7rem, 0.8vw, 1.5rem);
+}
 
+.products hr {
+    border: none;
+    border-top: 1.5px solid #867028;
+    margin: clamp(20px, 3vh, 50px) 0;
+}
 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(20px, 3vh, 50px);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: clamp(20px, 3vh, 50px);
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: clamp(10px, 2vh, 30px);
+}
+
+.product-card h3 {
+    font-size: clamp(1.1rem, 1.5vw, 2rem);
+    margin-bottom: clamp(10px, 2vh, 30px);
+}
+
+.product-card p {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+}
+
+.mango-cheese {
+    --card-color: #e7fcbe;
+}
+
+.cookies-cream {
+    --card-color: #d6ffff;
+}
+
+.ube-quezo {
+    --card-color: #e0d6ff;
+}
+
+.buko-cheese {
+    --card-color: #d6ffdc;
+}
+
+.chocolate {
+    --card-color: #f0d1b8;
+}
+
+.strawberry-quezo {
+    --card-color: #ffe0e0;
+}
 
 
 @media (max-width: 690px) {
