@@ -9,12 +9,16 @@
 }
 
 html {
-    background-color: #F3F0E1;
+    background: #F3F0E1;
     scroll-behavior: smooth;
 }
 
-#products {
+#products, #about-us, #faq, #rate-us {
     scroll-margin-top: min(50px, 10vh);
+}
+
+#contact-us {
+    scroll-margin-bottom: min(50px, 10vh);
 }
 
 /* Navigation Bar Styles */
@@ -105,8 +109,7 @@ header {
     text-align: center;
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
     padding-top: clamp(70px, 6vh, 150px);
-    background: linear-gradient(125deg, #F3F0E1 60%, #DFC95E);
-    border-bottom: 1.5px solid #867028
+    background: linear-gradient(135deg, #F3F0E1 75%, #DFC95E);
 }
 
 .header-content {
@@ -178,7 +181,7 @@ header {
 
 .products {
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
-    background-color: #F3F0E1;
+    background: linear-gradient(55deg, #F3F0E1 75%, #DFC95E);
 }
 
 .products h2 {
@@ -221,7 +224,7 @@ header {
 
 .product-card img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: clamp(10px, 2vh, 30px);
@@ -237,7 +240,7 @@ header {
 }
 
 .mango-cheese {
-    --card-color: #e7fcbe;
+    --card-color: #fdff99;
 }
 
 .cookies-cream {
@@ -260,6 +263,311 @@ header {
     --card-color: #ffe0e0;
 }
 
+/* About Us Section */
+
+.about-us {
+    padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
+    background: #F3F0E1;
+}
+
+.about-us h2 {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.about-us hr {
+    border: none;
+    border-top: 1.5px solid #867028;
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.about-us h3 {
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    margin-bottom: clamp(20px, 3vh, 50px);
+    width: clamp(280px, 80%, 800px);
+    margin: auto;
+    margin-top: clamp(20px, 6vh, 50px);
+}
+
+.about-us p {
+    font-size: clamp(0.8rem, 1.1vw, 1.5rem);
+    line-height: clamp(1.2rem, 1.8vw, 2rem);
+    width: clamp(280px, 80%, 800px);
+    margin: clamp(20px, 3vh, 50px) auto;
+    text-align: justify;
+}
+
+.about-image {
+    width: clamp(280px, 80%, 800px);
+    height: clamp(150px, 30vh, 400px);
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: clamp(20px, 3vh, 50px) auto;
+}
+
+/* FAQ Section */
+
+.faq {
+    padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
+}
+
+.faq h2 {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(20px, 3vh, 50px);
+    margin-top: clamp(20px, 3vh, 50px);
+    margin-bottom: clamp(20px, 3vh, 50px);
+}
+
+.faq-image {
+    flex: 1;
+}
+
+.faq-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.faq-questions {
+    flex: 1;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq-button {
+    width: min(100%, 500px);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+    padding: clamp(10px, 1vh, 30px);
+    margin-bottom: clamp(10px, 1vh, 30px);
+    font-size: clamp(0.75rem, 1vw, 1.5rem);
+    background-color: #eee4bb;
+    border-radius: 10px;
+    border: none;
+}
+
+.faq-button:hover {
+    cursor: pointer;
+}
+
+.faq-button::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.faq-button.active::after {
+    transform: rotate(180deg);
+    color: white;
+}
+
+
+.faq-button.active {
+    background-color: var(--primary-color-1);
+    color: white;
+}
+
+.faq-button.active + .faq-answer {
+    max-height: 200px; 
+}
+
+.faq-answer p {
+    padding: clamp(10px, 1vh, 30px);
+    padding-bottom: clamp(20px, 3vh, 50px);
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+}
+
+/* Rate Us Section */
+
+.rate-us {
+    padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
+    justify-content: center;
+    text-align: center;
+    background: #F3F0E1;
+}
+
+.rate-us h2 {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    line-height: clamp(2.2rem, 3.8vw, 4.5rem);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.rate-us p {
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    margin-top: clamp(20px, 3vh, 50px);
+    width: clamp(280px, 80%, 800px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rate-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(10px, 1vh, 30px);
+    margin-top: clamp(20px, 3vh, 50px);
+}
+
+.rate-form input {
+    display: inline-block;
+}
+
+.name-field, .email-field {
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(0.5rem, 0.5vw, 1rem);
+    border-radius: 10px;
+    border: none;
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
+    width: clamp(300px, 60%, 500px);
+}
+
+.feedback-field {
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(0.5rem, 0.5vw, 1rem);
+    border-radius: 10px;
+    border: none;
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
+    width: clamp(300px, 60%, 500px);
+    height: clamp(100px, 20vh, 200px);
+    resize: none;
+}
+
+.rate-button {
+    background-color: var(--primary-color-1);
+    color: white;
+    border: none;
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+}
+
+.rate-button:hover {
+    background-color: #cd4886;
+}
+
+
+/* Footer Section */
+
+footer {
+    background-color: #231b02;
+    margin-top: clamp(40px, 4vh, 100px);
+    flex-direction: row;
+    display: flex;
+    align-items: start;
+    min-width: 100%;
+}
+
+.footer-content {
+    color: white;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+    flex: 1;
+    padding: clamp(40px, 3vh, 50px) clamp(20px, 3vh, 50px);
+    float: right;
+}
+
+.footer-content h3 {
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+    margin-bottom: clamp(20px, 3vh, 50px);
+}
+
+.footer-content p {
+    margin-bottom: clamp(10px, 2vh, 30px);
+    font-size: clamp(0.7rem, 0.9vw, 1.5rem);
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 0.9vw, 1.5rem);
+    transition: color 0.3s ease;
+    margin-bottom: clamp(10px, 2vh, 30px);
+    display: inline-block;
+}
+
+.footer-content a:hover {
+    color: var(--primary-color-1);
+}
+
+.quick-links a {
+    display: block;
+}
+
+.newsletter {
+    flex: 2.5;
+    padding-left: clamp(20px, 3vw, 80px);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: clamp(10px, 1vh, 30px);
+    margin: clamp(20px, 3vh, 50px) 0;
+}
+
+.newsletter-field {
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(0.5rem, 0.5vw, 1rem);
+    border-radius: 10px;
+    width: clamp(230px, 60%, 400px);
+    border: none;
+    display: inline-block;
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
+}
+
+.newsletter-button {
+    background-color: var(--primary-color-1);
+    color: white;
+    border: none;
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 0.9vw, 1.5rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 150px;
+}
+
+.newsletter-form button:hover {
+    background-color: #cd4886;
+}
+
+.footer-socials {
+    margin-top: clamp(15px, 2vh, 30px);
+}
+
+.footer-socials .fab {
+    font-size: clamp(1.1rem, 1.5vw, 2.2rem);
+    margin-right: clamp(0.5rem, 1vw, 1.5rem);
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-socials .fab:hover {
+    color: var(--primary-color-1);
+}
+
+@media (max-width:900px) {
+    /* Footer Section */
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 690px) {
 
@@ -269,13 +577,19 @@ header {
         display: none;
     }
 
+    /* Products Section */
+
+    .products {
+        padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
+        background: linear-gradient(55deg, #F3F0E1 99%, #DFC95E);
+    }
+
     /* Header Styles */
 
     header {
     flex-direction: column;
     align-items: center;
     padding: clamp(100px, 10vh, 150px) clamp(30px, 5vw, 80px) clamp(20px, 3vh, 50px);
-    background: linear-gradient(115deg, #F3F0E1 50%, #DFC95E);
     }
 
     .header-content {
@@ -304,6 +618,57 @@ header {
     .header-image {
     width: 100%;
     }
+
+    /* Products Section */
+
+    .products {
+        padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
+        background: linear-gradient(55deg, #F3F0E1 75%, #DFC95E);
+    }
+
+    /* FAQ Section */
+
+    .faq-content {
+        flex-direction: column;
+    }
+
+    /* Footer Section */
+
+    footer {
+        flex-direction: column;
+        padding: clamp(40px, 3vh, 50px) clamp(20px, 5vw, 80px) 15px;
+    }
+
+    .footer-content {
+        width: 100%;
+        padding: clamp(20px, 3vh, 50px);
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content p {
+        margin-bottom: clamp(15px, 2vh, 30px);
+        font-size: clamp(0.9rem, 0.9vw, 1.5rem);
+    }
+
+    .footer-content a {
+        margin-bottom: clamp(15px, 2vh, 30px);
+        font-size: clamp(0.9rem, 0.9vw, 1.5rem);
+    }
+
+    .footer-socials {
+        margin-top: clamp(20px, 3vh, 50px);
+    }
+
+    .trademark {
+    text-align: center;
+    margin: clamp(30px, 3vh, 50px) auto;
+}
 }
 
 @media (max-width: 475px) {
@@ -353,5 +718,37 @@ header {
 
     .nav-button {
         display: none;
+    }
+
+    /* Products Section */
+
+    .products {
+        padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
+        background: linear-gradient(55deg, #F3F0E1 90%, #DFC95E);
+    }
+
+    /* Footer Section */
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        width: 100%;
+        padding: clamp(20px, 3vh, 50px);
+    }
+
+    .footer-content h3 {
+        font-size: clamp(1.6rem, 1.5vw, 2rem);
+        margin-bottom: clamp(20px, 3vh, 50px);
+    }
+
+    .footer-content p {
+        margin-bottom: clamp(15px, 2vh, 30px);
+        font-size: clamp(0.9rem, 0.9vw, 1.5rem);
+    }
+
+    .footer-socials {
+        margin-top: clamp(20px, 3vh, 50px);
     }
 }

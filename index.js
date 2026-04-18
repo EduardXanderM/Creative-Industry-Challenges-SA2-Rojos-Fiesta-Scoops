@@ -29,3 +29,22 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     navLinks.classList.remove("active");
   });
 });
+
+// FAQ toggle
+
+const buttons = document.querySelectorAll(".faq-button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    const isActive = button.classList.contains("active");
+
+    // close all
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // open clicked one (if it wasn't already open)
+    if (!isActive) {
+      button.classList.add("active");
+    }
+  });
+});
