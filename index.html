@@ -169,10 +169,10 @@
     <div class="rate-us" id="rate-us">
         <h2>Rate Us</h2>
         <p>We value your feedback! Please take a moment to rate your experience with Rojo's Fiesta Scoops.</p>
-        <form action="" method="POST" class="rate-form">
-            <input type="name" name="name" placeholder="Your Name" class="name-field">
-            <input type="email" name="email" placeholder="Your Email" class="email-field">
-            <input type="feedback" name="feedback" placeholder="Your Feedback" class="feedback-field">
+        <form action="" method="POST" class="rate-form" id="rate-form">
+            <input type="text" name="name" placeholder="Your Name *" class="name-field" id="rate-name" required>
+            <input type="email" name="email" placeholder="Your Email" class="email-field" id="rate-email">
+            <input type="text" name="feedback" placeholder="Your Feedback *" class="feedback-field" id="rate-feedback" required>
             <button type="submit" class="rate-button">Submit</button>
         </form>
     </div>
@@ -183,8 +183,8 @@
         <div class="footer-content newsletter">
             <h3>Stay Updated</h3>
             <p>“Be the first to scoop up new flavors, deals, and surprises.”</p>
-            <form action="" method="POST" class="newsletter-form">
-                <input type="email" name="email" placeholder="Enter email"  class="newsletter-field">
+            <form action="" method="POST" class="newsletter-form" id="newsletter-form">
+                <input type="email" name="email" placeholder="Your email *"  class="newsletter-field" id="newsletter-email" required>
                 <button type="submit" class="newsletter-button">Subscribe</button>
             </form>
         </div>
@@ -213,6 +213,6 @@
     </footer>
 
 
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
