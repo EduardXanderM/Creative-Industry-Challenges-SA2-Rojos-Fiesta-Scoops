@@ -565,8 +565,9 @@ footer {
     /* Products Section */
 
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        margin: clamp(20px, 3vh, 50px) 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: clamp(50px, 3vh, 50px) auto;
+        width: min(1200px, 80%);
     }
 }
 
