@@ -109,7 +109,8 @@ header {
     text-align: center;
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
     padding-top: clamp(70px, 6vh, 150px);
-    background: linear-gradient(135deg, #F3F0E1 75%, #DFC95E);
+    /* background: linear-gradient(135deg, #F3F0E1 75%, #DFC95E); */
+    background-image: url('img/bg_pattern.jpeg');
 }
 
 .header-content {
@@ -181,7 +182,7 @@ header {
 
 .products {
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
-    background: linear-gradient(55deg, #F3F0E1 75%, #DFC95E);
+    /* background: linear-gradient(55deg, #F3F0E1 75%, #DFC95E); */
 }
 
 .products h2 {
@@ -267,7 +268,6 @@ header {
 
 .about-us {
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
-    background: #F3F0E1;
 }
 
 .about-us h2 {
@@ -397,7 +397,6 @@ header {
     padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(20px, 3vh, 50px);
     justify-content: center;
     text-align: center;
-    background: #F3F0E1;
 }
 
 .rate-us h2 {
@@ -591,7 +590,6 @@ footer {
 
     .products {
         padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
-        background: linear-gradient(55deg, #F3F0E1 99%, #DFC95E);
     }
 
     /* Header Styles */
@@ -633,7 +631,6 @@ footer {
 
     .products {
         padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
-        background: linear-gradient(55deg, #F3F0E1 75%, #DFC95E);
     }
 
     /* FAQ Section */
@@ -734,7 +731,6 @@ footer {
 
     .products {
         padding: clamp(40px, 4vh, 100px) clamp(20px, 5vw, 80px) clamp(80px, 3vh, 50px);
-        background: linear-gradient(55deg, #F3F0E1 90%, #DFC95E);
     }
 
     /* Footer Section */
