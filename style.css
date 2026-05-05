@@ -484,11 +484,16 @@ footer {
 .footer-content h3 {
     font-size: clamp(1.2rem, 1.5vw, 2rem);
     margin-bottom: clamp(20px, 3vh, 50px);
+    color: #ddc882;
 }
 
 .footer-content p {
     margin-bottom: clamp(10px, 2vh, 30px);
     font-size: clamp(0.7rem, 0.9vw, 1.5rem);
+}
+
+.footer-content .fas {
+    display: inline-block;
 }
 
 .footer-content a {
